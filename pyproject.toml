@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python_coreml_stable_diffusion"
+version = "1.1.0"
+description = "Run Stable Diffusion on Apple Silicon with Core ML (Python and Swift)"
+requires-python = ">=3.7"
+dependencies = [
+    "coremltools>=8.2",
+    "diffusers[torch]==0.30.2",
+    "torch>=2.0.0",
+    "transformers==4.44.2",
+    "huggingface-hub==0.24.6",
+    "scipy",
+    "numpy>=1.25.0",
+    "pytest",
+    "scikit-learn",
+    "invisible-watermark",
+    "safetensors>=0.3.0",
+    "matplotlib",
+    "diffusionkit==0.4.0",
+    "einops",
+    "accelerate",
+]
