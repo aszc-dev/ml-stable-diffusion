@@ -1,32 +1,33 @@
-from setuptools import setup, find_packages
-
 from python_coreml_stable_diffusion._version import __version__
+from setuptools import find_packages, setup
 
-with open('README.md') as f:
+with open("README.md") as f:
     readme = f.read()
 
 setup(
-    name='python_coreml_stable_diffusion',
+    name="python_coreml_stable_diffusion",
     version=__version__,
-    url='https://github.com/apple/ml-stable-diffusion',
+    url="https://github.com/apple/ml-stable-diffusion",
     description="Run Stable Diffusion on Apple Silicon with Core ML (Python and Swift)",
     long_description=readme,
-    long_description_content_type='text/markdown',
-    author='Apple Inc.',
+    long_description_content_type="text/markdown",
+    author="Apple Inc.",
     install_requires=[
-        "coremltools>=8.0",
+        "coremltools>=8.2",
         "diffusers[torch]==0.30.2",
-        "torch",
+        "torch>=2.0.0",
         "transformers==4.44.2",
         "huggingface-hub==0.24.6",
         "scipy",
-        "numpy<1.24",
+        "numpy>=1.25.0",
         "pytest",
         "scikit-learn",
         "invisible-watermark",
-        "safetensors",
+        "safetensors>=0.3.0",
         "matplotlib",
         "diffusionkit==0.4.0",
+        "einops",
+        "accelerate",
     ],
     packages=find_packages(),
     classifiers=[
